@@ -6,7 +6,7 @@ public class Main {
     private static final ArrayGenerator<String> sortedArrayGenerator = length -> {
         String[] array = new String[length];
         for (int i = 0; i < length; i++) {
-            array[i] = Integer.toString(i);
+            array[i] = String.format("%03d", i);
         }
         return array;
     }; // Reemplácelo por una función lambda
@@ -14,7 +14,7 @@ public class Main {
     private static final ArrayGenerator<String> invertedArrayGenerator = length -> {
         String[] array = new String[length];
         for (int i = 0; i < length; i++) {
-            array[i] = Integer.toString(length-i);
+            array[i] = String.format("%03d", length - i);
         }
         return array;
     }; // Reemplácelo por una función lambda
@@ -23,7 +23,7 @@ public class Main {
         String[] array = new String[length];
         Random random = new Random();
         for (int i = 0; i < length; i++) {
-            array[i] = Integer.toString(random.nextInt(length));
+            array[i] = String.format("%03d", random.nextInt(length));
         }
         return array;
     }; // Reemplácelo por una función lambda
